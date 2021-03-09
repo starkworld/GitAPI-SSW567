@@ -14,10 +14,10 @@ def get_user_repos(user_name: str) -> List:
     Inputs: string
     Output: List
     """
-    link: str = "https://api.github.com/users/" + user_name + "/repos"
+    link = "https://api.github.com/users/" + user_name + "/repos"
     user_data = requests.get(link)
     repositories = json.loads(user_data.text)
-    user_repos: List = []
+    user_repos = []
 
     # Loop through nodes getting repository name, handle error of invalid username
     for repo in repositories:
@@ -25,7 +25,6 @@ def get_user_repos(user_name: str) -> List:
             user_repos.append(repo.get("name"))
         except:
             user_repos = []
-
     return user_repos
 
 
