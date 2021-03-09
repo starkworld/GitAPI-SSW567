@@ -5,8 +5,8 @@ Date: march 09, 2021
 """
 
 import json
-from typing import List
 import requests
+from typing import List
 
 
 def get_user_repos(user_name: str) -> List:
