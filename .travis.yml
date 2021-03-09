@@ -4,4 +4,4 @@ python:
 
 # command to run tests
 script:
- - python -m unittest TestGitHubRepo
+ - python -m unittest git_api_test
